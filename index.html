@@ -31,7 +31,6 @@
 
 
 
-
       </style>
 
     <style>
@@ -166,6 +165,36 @@
 
       const d = new Date();
       document.getElementById("date&time").innerHTML = d;
+    </script>
+
+    <h2>The Dynamics of Aircraft Electrical Systems</h2>
+
+    <script>
+      //Array of slide image URL's
+      var slideImages = ["slide 1", "slide 2", "slide 3", "slide 4"];
+      var CurrentSlide = 0;
+      
+      function showSlide() {
+        document.getElementById('slide').src = slideImages[currentSlide];
+      }
+
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % slideImages.length;
+          showSlide();
+        }
+
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+        showSlide();
+      }
+          //Function to show a specific slide based on the button clicked
+      function showSlideNumber(slideNumber) {
+        currentSlide = slideNumber -1;
+        showSlide();
+      }
+
+      //Call showSlide() to display the first slide
+      showSlide();
     </script>
 
    
