@@ -171,7 +171,7 @@
 
     <script>
       //Array of slide image URL's
-      var slideImages = ["slide 1", "slide 2", "slide 3", "slide 4"];
+      var slideImages = ["slide1.jpg", "slide2.jpg", "slide3.jpg", "slide4.jpg"];
       var CurrentSlide = 0;
       
       function showSlide() {
@@ -196,5 +196,23 @@
       //Call showSlide() to display the first slide
       showSlide();
     </script>
+
+    <div id="slide-container">
+      <img id="slide" src="slide1.jpg" alt="slide 1" style="width:100%; max-width:800px;">
+
+      <!-- Previous ad Next buttons container -->
+      <div class ="button-container">
+        <button class="button" onclick="prevSlide()">Previous</button>
+        <button class="button" onclick="nextSlide()">Next</button>
+      </div>
+
+      <!-- Slide number buttons container -->
+      <div class="slide-number-container">
+        <button class="button" onclick="showSlideNumber(1)">1</button>
+        <button class="button" onclick="showSlideNumber(2)">2</button>
+        <button class="button" onclick="showSlideNumber(3)">3</button>
+        <button class="button" onclick="showSideNumber(4)">4</button>
+      </div>
+      
 
    
